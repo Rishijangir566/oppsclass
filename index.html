@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class,object and inharitance</title>
+</head>
+<body>
+       <h2 style="text-align: center;"> oops [object orianted programming] </h2>
+    <script>
+        // Not repeat code -----------------------
+   
+    //     let obj1 ={
+    //     fristName:"rishi",
+    //     lastName:"jangir",
+    //     age:23,
+    //     city:"jaipur"
+    //  }
+    //  let obj2 ={
+    //     fristName:"rohit",
+    //     lastName:"jangir",
+    //     age:25,
+    //     city:"jaipur"
+    //  }
+    //  console.log(obj1,obj2)
+
+ // es5 use of constructor ------------------------
+
+    //  function Data (f,l,a,c){
+    //      this.fNmae=f
+    //      this.lName=l
+    //      this.age=a
+    //      this.city=c
+    //  }
+
+    //  let myObj= new Data("rishi","jangir",23,"jaipur")
+    //  console.log(myObj)
+
+
+    //  es6 use of inharitance-----------------
+
+         // class Human {
+         //     property="name ,age ,height, color, city"
+         //     action=" sleep ,eat, work"
+         // }
+         //   class Developer inharit (Human) {
+         //       property="id , company, salary"
+         //       action="coding , type"
+         //   }
+
+//    class Human{
+//     constructor(f,l,a,c){
+//         this.fName=f
+//         this.lName=l
+//         this.age=a
+//         this.city=c
+//     }
+//    }
+
+//    class Developer extends Human{
+//        company="newone"
+//    }
+
+//    let myObj = new Developer ("rishi","jangir","23","joudhpur")
+//     console.log(myObj)
+
+
+    class student {
+        constructor(u,l,r){
+            this.userName=u
+            this.lastName=l
+            this.rollNum=r
+        }
+    }
+
+    class teacher extends student{
+
+        constructor(u,l,r,s,i,a){
+        super(u,l,r)
+
+            this.salary=s
+            this.id=i
+            this.age=a
+        }
+    }
+
+     class principal extends teacher  {
+         
+     }
+
+    //  let studentdata= ("rishi","jangir",14,2400)
+    //  let teacherdata=(23000,2323,5)
+     
+    let mydetail = new principal ("rishi","jangir",14,2323,7,23)
+    console.log(mydetail)
+    </script>
+</body>
+</html>
